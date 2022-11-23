@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>校园失物招领信息共享平台</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/01zhuce.css">
+</head>
+<style>
+    @media only screen and (max-width: 770px) {
+         #fadeshow1 {
+        display: none;
+    }
+    }
+</style>
+<body>
+<!-- header分区 -->
+<header>
+	<div class="container">
+        <div class="btnBox fr">
+            <button id="denglu" class="btn btn-primary btn-sm" onClick="location.href = '50.html';">登录</button>
+            <button id="zhuce" class="btn btn-info btn-sm" onClick="location.href = '51.html';">注册</button>
+        </div>
+    </div>
+</header>
+<!-- logo分区 -->
+<div class="logo">
+	<div class="container">
+        <h1 class="fl logo_img">
+        	<img src="image/schoolLogo.png" class="img-responsive" alt="">
+        </h1>
+    </div>
+</div>
+<!-- nav分区 -->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="1findOwner.html">失物招领</a></li>
+            <li><a href="2findThings.html">寻物启事</a></li>
+            <li><a href="3public_findOwner.html">发布失物招领</a></li>
+            <li class="active"><a href="4public_findThing.html">发布寻物启事</a></li>
+            <li><a href="5thanksLetter.html">感谢信</a></li>
+            <li><a href="7aboutUs.html">关于我们</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- content分区 -->
+<section>
+	<div class="container">
+        <div class="list-group">
+            <div class="list-group-item active">
+                <h4 class="list-group-item-heading">
+                    发布失物招寻物启事信息
+                    <ol class="breadcrumb fr">
+                        <li>您现在的位置：</li>
+                        <li>主页</li>
+                        <li>发布寻物启事</li>
+                    </ol>
+                </h4>
+            </div>
+            <div class="list-group-item animated fadeInLeft">
+                <form class="form-horizontal" role="form" id="uploadForm">
+                    <div class="form-group">
+                        <label for="title" class="col-sm-2 control-label"><span class="start">*</span>标题</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="title" placeholder="请输入您要发布信息的标题">
+                          <span>* &nbsp;标题示范&nbsp;: &nbsp;&nbsp;"翡翠湖校区：在翠一教101教室遗失一张校园卡"</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fabuPerson" class="col-sm-2 control-label">发布者</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="fabuPerson" placeholder="张三">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2 control-label">发布者身份</div>
+                        <div class="col-sm-6">
+                            <label class="radio-inline">
+                                <input type="radio" name="userType" id="manager" value="1"> 管理员
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="userType" id="normal" value="0"> 普通用户
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="thingType" class="col-sm-2 control-label"><span class="start">*</span>物品类型</label>
+                        <div class="col-sm-3">
+                        	<select class="form-control" id="thingType">
+                                <option value="卡类">卡类</option>
+                                <option value="证件类">证件类</option>
+                                <option value="文具类">文具类</option>
+                                <option value="生活用品类">生活用品类</option>
+                                <option value="电子产品类">电子产品类</option>
+                                <option value="其它类">其它类</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                        	<input type="text" class="form-control" id="type" placeholder="具体类型">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label"><span class="start">*</span>物品描述关键词</label>
+                        <div class="col-sm-3">
+                        	<input type="text" class="form-control" id="keyWord01" placeholder="关键词01">
+                            <span>* &nbsp;关键词示范&nbsp;: &nbsp;&nbsp;"笔袋"</span>
+                        </div>
+                        <div class="col-sm-3">
+                        	<input type="text" class="form-control" id="keyWord02" placeholder="关键词02">
+                            <span>* &nbsp;关键词示范&nbsp;: &nbsp;&nbsp;"蓝色"</span>
+                        </div>
+                        <div class="col-sm-3">
+                        	<input type="text" class="form-control" id="keyWord03" placeholder="关键词03">
+                            <span>* &nbsp;关键词示范&nbsp;: &nbsp;&nbsp;"有卡通图案"</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="location" class="col-sm-2 control-label"><span class="start">*</span>丢失地点</label>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="location">
+                                <option value="屯溪路校区">屯溪路校区</option>
+                                <option value="翡翠湖校区">翡翠湖校区</option>
+                                <option value="六安路校区">六安路校区</option>
+                                <option value="宣城校区">宣城校区</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-7">
+                        	<input type="text" class="form-control" id="location_detail" placeholder="请输入详细地址">
+                        </div>
+                    </div>                  
+                    <div class="form-group">
+                        <label for="pickUpDate" class="col-sm-2 control-label"><span class="start">*</span>丢失时间</label>
+                        <div class="col-sm-6">
+                        	<input class="form-control" id="pickUpDate"  type="datetime-local" value="2022-11-06T14:00:00"/>
+                        </div>
+                    </div>                  
+                    <div class="form-group">
+                        <label for="contactOne" class="col-sm-2 control-label"><span class="start">*</span>联系人</label>
+                        <div class="col-sm-6">
+                        	<input type="text" class="form-control" id="contactOne" placeholder="可输入您的昵称" >
+                        </div>
+                    </div>                  
+                    <div class="form-group">
+                        <label for="contacWay" class="col-sm-2 control-label"><span class="start">*</span>联系方式</label>
+                        <div class="col-sm-6">
+                        	<input type="text" class="form-control" id="contacWay" placeholder="请输入您的联系方式，QQ号/e-mail/手机号均可" >
+                        </div>
+                    </div>                  
+                    <div class="form-group">
+                        <label for="detail" class="col-sm-2 control-label"><span class="start">*</span>拾取物品详情</label>
+                        <div class="col-sm-10">
+                        	<textarea name="" class="form-control" id="detail" placeholder="请输入您拾取的失物的详细描述" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>  
+                    <div class="form-group">
+                        <label for="inputfile" class="col-sm-2 control-label"><span class="start">*</span>物品照片</label>
+                        <div class="col-sm-6">
+                            <input type="file" id="inputfile" name="uploadFile">
+                        </div>
+                     </div> 
+                </form>
+                <div class="form-group" style="text-align: center;">
+                    <button class="btn btn-success" onclick="publicFindThing();">提交</button>
+                    <button class="btn btn-warning">取消</button>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+<!-- footer分区 -->
+<footer>
+	<div class="footer">	
+        <div class="container">
+            <ul>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">网站合作</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+    	<p>合肥工业大学软件学院</p>
+        <p>地址：合肥工业大学翡翠湖校区</p>
+        <p>提示：禁止发布任何违反国家法律、法规的言论与图片等内容</p>
+        <p>版权最终归网站设计者所有</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>校园失物招领信息共享平台</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/7aboutus.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+	<script src="js/Times.js"></script>
+</head>
+<style>
+    @media only screen and (max-width: 770px) {
+         #fadeshow1 {
+        display: none;
+    }
+    }
+</style>
+<body>
+<!-- header分区 -->
+<header>
+	<div class="container">
+    	<div class="time fl">
+        	<span class="hours"></span>
+            <br/>
+            <span class="date"></span>
+        </div>
+        <div class="btnBox fr">
+            <button id="denglu" class="btn btn-primary btn-sm" onClick="location.href = '50.html';">登录</button>
+            <button id="zhuce" class="btn btn-info btn-sm" onClick="location.href = '51.html';">注册</button>
+        </div>
+
+    </div>
+</header>
+<!-- logo分区 -->
+<div class="logo">
+	<div class="container">
+        <h1 class="fl logo_img">
+        	<img src="image/schoolLogo.png" class="img-responsive" alt="">
+        </h1>
+        <div class="search fr">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="请输入您要查找的物品名称">
+                <span class="input-group-btn">
+                    <button class="btn btn-info" type="button">搜索</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- nav分区 -->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="1findOwner.html">失物招领</a></li>
+            <li><a href="2findThings.html">寻物启事</a></li>
+            <li><a href="3public_findOwner.html">发布失物招领</a></li>
+            <li><a href="4public_findThing.html">发布寻物启事</a></li>
+            <li><a href="5thanksLetter.html">感谢信</a></li>
+            <li class="active"><a href="7aboutUs.html">关于我们</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- content分区 -->
+<section>
+	<div class="container">
+        <div class="list-group" id="listHeader">
+            <div class="list-group-item active">
+                <h4 class="list-group-item-heading">
+                    <span>关于我们</span>
+                    <ol class="breadcrumb fr">
+                        <li>您现在的位置：</li>
+                        <li>关于我们</li>
+                        <li>详情页</li>
+                    </ol>
+                </h4>
+            </div>        
+            <div class="list-group-item">
+            	<div class="introduce">
+                	<p>我们也经历过丢东西的困扰与焦虑，因此激发我们的灵感创作这样一个网站。</p>
+                    <br>
+                     <p>当下校园里各种卡片比如我们的身份证校园卡等等对我们是极其重要的，一旦丢失会产生很大的不便。</p>
+                     <br>
+                     <p>当看到同学们生活必需的各种卡、证之类重要物品遗失以后，需四处奔波寻找的难题，而遗失物品招领处又被大量遗失物品不能及时找到失主在积压所困惑；我们尽最大的努力让遗失物品归还原主。</p>
+                </div>
+                <br>
+                <div>
+                    <br>
+                    <br>
+                	<p>失物认领网以免费发布信息、为师生提供方便、快捷的服务宗旨。站内设有寻物启事,失物招领、发布失物三大窗口，查询、注册方便快捷简单。</p>
+                    <br>
+                    <p>丢失物品却又不知去哪里寻找，那就请时刻关注服务于师生们的失物信息共享平台吧！</p>
+                    <br><br>
+                </div>
+                <div style="text-align: right;">
+                	<br>
+                    <hr>
+                	<p style=" padding-right:50px; box-sizing: border-box;">校园失物信息共享平台</p>
+                    <br>
+                	<p style=" padding-right:80px; box-sizing: border-box;">2022-11-06</p>
+                </div>
+            </div>        
+        </div>
+	</div>
+</section>
+<!-- footer分区 -->
+<footer>
+	<div class="footer">	
+        <div class="container">
+            <ul>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">网站合作</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+    	<p>合肥工业大学软件学院</p>
+        <p>地址：合肥工业大学翡翠湖校区</p>
+        <p>提示：禁止发布任何违反国家法律、法规的言论与图片等内容</p>
+        <p>版权最终归网站设计者所有</p>
+    </div>
+</footer>
+</body>
+</html>

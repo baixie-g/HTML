@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>校园失物招领信息共享平台</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/1findOwner.css">
+    <link rel="stylesheet" href="css/5thanksLetter.css">
+</head>
+<style>
+    @media only screen and (max-width: 770px) {
+         #fadeshow1 {
+        display: none;
+    }
+    }
+</style>
+<body>
+<!-- header分区 -->
+<header>
+	<div class="container">
+        <div class="btnBox fr">
+            <button id="denglu" class="btn btn-primary btn-sm" onClick="location.href = '50.html';">登录</button>
+            <button id="zhuce" class="btn btn-info btn-sm" onClick="location.href = '51.html';">注册</button>
+        </div>
+
+    </div>
+</header>
+<!-- logo分区 -->
+<div class="logo">
+	<div class="container">
+        <h1 class="fl logo_img">
+        	<img src="image/schoolLogo.png" class="img-responsive" alt="">
+        </h1>
+        <div class="search fr">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="请输入您要查找的物品名称">
+                <span class="input-group-btn">
+                    <button class="btn btn-info" type="button">搜索</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- nav分区 -->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="1findOwner.html">失物招领</a></li>
+            <li><a href="2findThings.html">寻物启事</a></li>
+            <li><a href="3public_findOwner.html">发布失物招领</a></li>
+            <li><a href="4public_findThing.html">发布寻物启事</a></li>
+            <li class="active"><a href="5thanksLetter.html">感谢信</a></li>
+            <li><a href="7aboutUs.html">关于我们</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- content分区 -->
+<section>
+	<div class="container">
+        <div class="list-group" id="listHeader">
+            <div class="list-group-item active">
+                <h4 class="list-group-item-heading">
+                    <span>感谢信信息</span>
+                    <div class="chooseAdress">
+                        <form role="form">
+                            <label for="adress">校区：</label>
+                            <select class="form-control" id="adress">
+                                <option>屯溪路校区</option>
+                                <option>翡翠湖校区</option>
+                                <option>六安路校区</option>
+                                <option>宣城校区</option>
+                            </select>
+                            <button class="btn btn-primary" style="top: -2px;">搜索</button>
+                        </form>
+                        <button class="btn btn-warning" onClick="location.href='6public_thankLetter.html'">发布感谢信</button>
+                    </div>
+                    <ol class="breadcrumb fr">
+                        <li>您现在的位置：</li>
+                        <li>感谢信</li>
+                        <li>列表页</li>
+                    </ol>
+                </h4>
+            </div>        
+            
+        </div>
+        <div class="list-group" id="listDeatil"></div>
+        <div id="paging">
+            <div class="first" onclick="thinkLetterDatas(1)">首页</div>
+            <div class="prev" onclick="prevPage();">上一页</div>
+            <div class="first" onclick="thinkLetterDatas(1)">1</div>
+            <div class="first" onclick="thinkLetterDatas(2)">2</div>
+            <div class="first" onclick="thinkLetterDatas(3)">3</div>
+            <div class="first" onclick="thinkLetterDatas(4)">4</div>
+            <div class="first" onclick="thinkLetterDatas(5)">5</div>
+            <div class="next" onclick="nextPage();">下一页</div>
+            <div class="last">末页</div>
+        </div>
+        <br>
+	</div>
+</section>
+<!-- footer分区 -->
+<footer>
+	<div class="footer">	
+        <div class="container">
+            <ul>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">网站合作</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+    	<p>合肥工业大学软件学院</p>
+        <p>地址：合肥工业大学翡翠湖校区</p>
+        <p>提示：禁止发布任何违反国家法律、法规的言论与图片等内容</p>
+        <p>版权最终归网站设计者所有</p>
+    </div>
+</footer>
+</body>
+</html>

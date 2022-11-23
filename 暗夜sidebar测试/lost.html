@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HFUT'L&F</title>
+    <link rel="stylesheet" href="./sideabar&darklight.css">
+</head>
+<body>
+    <div class="header">
+        <div class="btn"><a href="./index.html" style="margin-right: 50px;">公示栏</a></div>
+        <div class="btn"><a href="./lost.html" style="margin-left: 50px;">发布失物</a></div>
+        <div class="btn"><a href="./found.html" style="margin-left: 50px;">发布招领</a></div>
+        <button class="btn" id="theme-btn-dark">暗夜</button>
+        <button class="btn" id="theme-btn-light">白天</button>
+        <button class="btn" id="toggle-sidebar" style="margin: 50px;">菜单</button>
+    </div>
+    <div class="sidebar" id="app-sidebar">
+        <ul class="sidebar-menu" id="sidebar-menu">
+            <li class="highlighted">公开栏</li>
+            <li><a href="./lost.html">发布失物</a></li>
+            <li><a href="./found.html">发布招领</a></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="footer">
+            &copy;2022-HFUT
+            qq:2039279630
+        </div>
+    </div>
+    <main class="container">
+        <h1>发布失去</h1>
+        <p>简介</p>
+
+    </main>
+    <script src="./helper.js"></script>
+    <script>
+        const btnToggleleSidebar =document.querySelector('#toggle-sidebar');
+        const appSiderbar = document.querySelector('#app-sidebar');
+        const sidebarMenus=document.querySelectorAll('#sidebar-menu li')
+        const btnDark=document.querySelector('#theme-btn-dark');
+        const btnLight=document.querySelector('#theme-btn-light');
+        btnToggleleSidebar.onclick =function(){
+            toggleClass(appSiderbar,'show');
+        }
+        for(let i=0;i<sidebarMenus.length;i++){
+            sidebarMenus[i].onclick=function(){
+                for(let i=0;i<sidebarMenus.length;i++){
+                    removeClass(sidebarMenus[i],'highlighted')
+                }
+                addClass(this,'highlighted');
+            }
+        }
+        btnDark.onclick=function(){
+            switchMode({
+                element:"body",
+                isDarkMode:true,
+            });
+
+        }
+        btnLight.onclick=function(){
+            switchMode({
+                element:"body",
+                isDarkMode:false,
+            });
+        }
+        const switchMode = function(mode){
+            const element=document.querySelector(mode.element)
+            if(mode.isDarkMode){
+                addClass(element,'darkmode');
+            }else{
+                removeClass(element,'darkmode');
+            }
+        }
+    </script>
+</body>
+</html>
